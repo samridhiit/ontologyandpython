@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ex="http://example.org#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org#Player2">
+    <rdf:type rdf:resource="http://example.org#PlayerScoreOperation"/>
+    <ex:hasPlayerName>Jane</ex:hasPlayerName>
+    <ex:hasScore>90</ex:hasScore>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org#Rohit">
+    <rdf:type rdf:resource="http://example.org#PlayerScoreOperation"/>
+    <ex:hasPlayerName>Rohit</ex:hasPlayerName>
+    <ex:hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.0</ex:hasScore>
+    <ex:hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#double">49.0</ex:hasScore>
+    <ex:hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#double">72.0</ex:hasScore>
+    <ex:hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#double">95.0</ex:hasScore>
+    <ex:hasScore rdf:datatype="http://www.w3.org/2001/XMLSchema#double">107.0</ex:hasScore>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org#ScoreCalculationOperation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#MathematicalOperation"/>
+    <rdfs:label>Score Calculation Operation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org#PlayerScoreOperation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org#MathematicalOperation"/>
+    <rdfs:label>Player Score Operation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org#Player3">
+    <rdf:type rdf:resource="http://example.org#PlayerScoreOperation"/>
+    <ex:hasPlayerName>Mike</ex:hasPlayerName>
+    <ex:hasScore>70</ex:hasScore>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org#hasPlayerName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org#PlayerScoreOperation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org#hasScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org#PlayerScoreOperation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org#AverageScoreCalculation">
+    <rdf:type rdf:resource="http://example.org#ScoreCalculationOperation"/>
+    <ex:hasPlayerName>John, Jane, Mike</ex:hasPlayerName>
+    <ex:hasScore>80, 90, 70</ex:hasScore>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org#MathematicalOperation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>MathematicalOperation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org#Player1">
+    <rdf:type rdf:resource="http://example.org#PlayerScoreOperation"/>
+    <ex:hasPlayerName>John</ex:hasPlayerName>
+    <ex:hasScore>80</ex:hasScore>
+  </rdf:Description>
+</rdf:RDF>
